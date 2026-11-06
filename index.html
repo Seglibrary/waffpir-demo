@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WaffPir | Waffle &amp; Kumpir</title>
+  <meta name="description" content="WaffPir: Belçika'dan gelen waffle ve 10 malzemeli kumpir. Malzemeni seç, İstanbul'un Anadolu yakasındaki 7 şubemizden sipariş ver.">
+  <meta name="theme-color" content="#e6007e">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="WaffPir | Waffle &amp; Kumpir">
+  <meta property="og:description" content="Malzemeni seç, lezzete koş! Belçika waffle ve 10 malzemeli kumpir.">
+  <meta property="og:image" content="https://seglibrary.github.io/waffpir-demo/assets/wide-sandvic.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="wrap nav__in">
+    <a href="#top" class="brand" aria-label="WaffPir ana sayfa"><img src="assets/logo.png" alt="WaffPir Waffle &amp; Kumpir"></a>
+    <button class="nav__toggle" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
+    <nav class="nav__links" id="navlinks">
+      <a href="#menu">Menü</a>
+      <a href="#sec">Malzemeni Seç</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#subeler">Şubeler</a>
+      <a href="#siparis" class="btn btn--yellow btn--sm">Sipariş Ver</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero__in">
+    <div class="hero__text">
+      <p class="kicker">Waffle &amp; Kumpir</p>
+      <h1>Malzemeni seç,<br><span>lezzete koş!</span></h1>
+      <p class="lead">Belçika'dan gelen waffle, 10 malzemeli kumpir. Tezgâhtan sen seç, biz sıcak sıcak hazırlayalım.</p>
+      <div class="hero__cta">
+        <a href="#siparis" class="btn btn--yellow">Hemen sipariş ver</a>
+        <a href="#menu" class="btn btn--ghost">Menüyü gör</a>
+      </div>
+      <p class="hero__loc">📍 Ümraniye · Ataşehir · Maltepe · Çekmeköy · Esatpaşa · K. Bakkalköy · Kartal</p>
+    </div>
+    <div class="hero__art" aria-hidden="true">
+      <div class="hero__photo"><img src="assets/hero.jpg" alt="" width="740" height="670"></div>
+      <img class="float f1" src="assets/waffle-plate.png" alt="" width="320" height="320">
+      <img class="float f2" src="assets/kumpir-bowl.png" alt="" width="344" height="344">
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Belçika'dan gelen lezzet</span><span>★</span><span>10 malzemeli kumpir</span><span>★</span><span>Malzemeni sen seç</span><span>★</span><span>Sıcak sıcak hazırlanır</span><span>★</span>
+    <span>Belçika'dan gelen lezzet</span><span>★</span><span>10 malzemeli kumpir</span><span>★</span><span>Malzemeni sen seç</span><span>★</span><span>Sıcak sıcak hazırlanır</span><span>★</span>
+  </div>
+</div>
+
+<!-- STEPS -->
+<section class="steps">
+  <div class="wrap">
+    <h2 class="h2">Nasıl <span>çalışıyor?</span></h2>
+    <ol class="steps__grid">
+      <li><b>1</b><h3>Birini seç</h3><p>Waffle mı, kumpir mi? Ya da ikisi birden.</p></li>
+      <li><b>2</b><h3>Malzemeni seç</h3><p>Çikolata, meyve, sos, sucuk... tezgâh senin.</p></li>
+      <li><b>3</b><h3>Afiyet olsun</h3><p>Mekânda ye ya da paket al, kapına gelsin.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <h2 class="h2">Menü</h2>
+    <div class="tabs" role="tablist" aria-label="Menü kategorileri" id="tabs"></div>
+    <div class="menu__panel" id="panel" role="tabpanel"></div>
+  </div>
+</section>
+
+<!-- BUILDER -->
+<section class="builder" id="sec">
+  <div class="wrap">
+    <h2 class="h2 h2--light">Kendi <span>lezzetini</span> tasarla</h2>
+    <p class="builder__sub">Malzemeleri seç, fiyatı anında gör. (Sipariş için Uber Eats ya da Yemeksepeti'ne geçersin.)</p>
+
+    <div class="switch" role="group" aria-label="Ürün tipi">
+      <button class="switch__btn is-on" data-mode="kumpir">🥔 Kumpir</button>
+      <button class="switch__btn" data-mode="waffle">🧇 Waffle</button>
+    </div>
+
+    <div class="builder__grid">
+      <div id="chips"></div>
+      <aside class="summary" aria-live="polite">
+        <h3 id="sumTitle">Kumpirin</h3>
+        <p class="summary__count"><b id="sumCount">0</b> malzeme seçtin</p>
+        <ul id="sumList" class="summary__list"></ul>
+        <p class="summary__tier" id="sumTier"></p>
+        <p class="summary__price" id="sumPrice"></p>
+        <a href="#siparis" class="btn btn--yellow btn--block">Sipariş ver</a>
+        <button class="link" id="sumReset" type="button">Seçimi temizle</button>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER -->
+<section class="order" id="siparis">
+  <div class="wrap order__in">
+    <p class="kicker">Online sipariş</p>
+    <h2 class="h2 h2--light">Aç mısın? <span>Hemen sipariş ver!</span></h2>
+    <p class="order__sub">Kapına gelsin. Tercih ettiğin uygulamayı seç, birkaç dokunuşla sipariş ver.</p>
+    <div class="order__cards">
+      <a class="ocard ocard--ue" id="lnkTy" target="_blank" rel="noopener">
+        <span class="ocard__ico" aria-hidden="true">🛵</span>
+        <span class="ocard__txt"><small>Hızlı teslimat</small><b>Uber <i>Eats</i></b></span>
+        <span class="ocard__go">Sipariş ver →</span>
+      </a>
+      <a class="ocard ocard--ys" id="lnkYs" target="_blank" rel="noopener">
+        <span class="ocard__ico" aria-hidden="true">🛵</span>
+        <span class="ocard__txt"><small>Kapına kadar</small><b>Yemeksepeti</b></span>
+        <span class="ocard__go">Sipariş ver →</span>
+      </a>
+    </div>
+    <p class="order__note">Mekânda yemek ya da paket almak için en yakın şubemize uğrayabilirsin. Kampanyalar için bizi <a href="https://www.instagram.com/waffpir/" target="_blank" rel="noopener">Instagram'da takip et</a>.</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="wrap about__in">
+    <img src="assets/mekan.jpg" alt="WaffPir çalışanı ve duvar resmi" loading="lazy" width="800" height="680">
+    <div>
+      <p class="kicker kicker--pink">Mekân</p>
+      <h2 class="h2">WaffPir'in <span>renkli dünyasına</span> davetlisiniz!</h2>
+      <p>Duvardaki Donald'dan tezgâhtaki çikolatalara kadar her şey renkli. Gel, malzemeni kendin seç, kumpirini ya da waffle'ını yanında hazırlayalım.</p>
+      <ul class="ticks">
+        <li>Belçika waffle hamuru</li>
+        <li>10 malzemeye kadar kumpir</li>
+        <li>Mekânda ye ya da paket al</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="galeri">
+  <div class="wrap">
+    <h2 class="h2">Galeri</h2>
+    <div class="gallery__grid">
+      <img src="assets/post-sandwich-box.jpg" alt="Sandviç waffle kutusu" loading="lazy">
+      <img src="assets/post-kumpir10.jpg" alt="10 malzemeli kumpir" loading="lazy">
+      <img src="assets/post-katli.jpg" alt="Katlı waffle" loading="lazy">
+      <img src="assets/post-mola.jpg" alt="Bir tatlı mola?" loading="lazy">
+      <img src="assets/post-kumpir-lezzet.jpg" alt="Soslu kumpir" loading="lazy">
+      <img src="assets/post-paket.jpg" alt="WaffPir paket servis" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- BRANCHES -->
+<section class="branches" id="subeler">
+  <div class="wrap">
+    <h2 class="h2">7 şube, <span>yakınında</span> biri var</h2>
+    <ul class="branches__grid" id="branchGrid"></ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <img src="assets/logo.png" alt="WaffPir Waffle &amp; Kumpir" width="110" height="110">
+      <p>Belçika'dan gelen waffle, 10 malzemeli kumpir. Malzemeni sen seç.</p>
+      <a class="social" href="https://www.instagram.com/waffpir/" target="_blank" rel="noopener" aria-label="WaffPir Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>@waffpir</span></a>
+    </div>
+    <div>
+      <h4>Keşfet</h4>
+      <ul>
+        <li><a href="#menu">Menü</a></li>
+        <li><a href="#sec">Kendi lezzetini tasarla</a></li>
+        <li><a href="#siparis">Sipariş ver</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#subeler">Şubeler</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Şubelerimiz</h4>
+      <ul class="footer__branches">
+        <li>Ümraniye</li><li>Ataşehir</li><li>Maltepe</li><li>Çekmeköy</li><li>Esatpaşa</li><li>K. Bakkalköy</li><li>Kartal</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Yasal</h4>
+      <ul>
+        <li><a href="kvkk.html">KVKK Aydınlatma Metni</a></li>
+        <li><a href="https://www.instagram.com/waffpir/" target="_blank" rel="noopener">Instagram'da takip et</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <p>© <span id="yr"></span> WaffPir Waffle &amp; Kumpir. Tüm hakları saklıdır.</p>
+    <a href="kvkk.html">KVKK</a>
+  </div>
+</footer>
+
+<a href="#siparis" class="sticky-order" id="stickyOrder">🛵 Sipariş ver</a>
+
+<script src="menu.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
